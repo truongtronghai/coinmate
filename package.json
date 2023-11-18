@@ -11,7 +11,8 @@
         "lint:js": "eslint --ext \".ts,.vue\" --ignore-path .gitignore .",
         "lint:prettier": "prettier --check .",
         "lint": "yarn lint:js && yarn lint:prettier",
-        "lintfix": "prettier --write --list-different . && yarn lint:js --fix"
+        "lintfix": "prettier --write --list-different . && yarn lint:js --fix",
+        "prepare": "husky install"
     },
     "devDependencies": {
         "@nuxt/devtools": "latest",
@@ -21,10 +22,18 @@
         "eslint": "^8.54.0",
         "eslint-config-prettier": "^9.0.0",
         "eslint-plugin-prettier": "^5.0.1",
+        "husky": "^8.0.0",
+        "lint-staged": "^15.1.0",
         "nuxt": "^3.8.1",
         "prettier": "^3.1.0",
         "typescript": "^5.2.2",
         "vue": "^3.3.8",
         "vue-router": "^4.2.5"
+    },
+    "lint-staged": {
+        "**/*.{js,ts,vue}": [
+            "npx prettier --write",
+            "npx eslint --fix"
+        ]
     }
 }
