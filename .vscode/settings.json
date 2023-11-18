@@ -1,0 +1,7 @@
+{
+    // remove semicolons
+    "prettier.semi": false,
+
+    // remove trailing commas
+    "prettier.trailingComma": "none"
+}
