@@ -263,26 +263,8 @@
                             <h5 class="font-bold uppercase text-gray-600">Graph</h5>
                         </div>
                         <div class="p-5">
-                            <canvas id="chartjs-4" class="chartjs" width="undefined" height="undefined"></canvas>
-                            <!-- <script>
-                                new Chart(document.getElementById('chartjs-4'), {
-                                    type: 'doughnut',
-                                    data: {
-                                        labels: ['P1', 'P2', 'P3'],
-                                        datasets: [
-                                            {
-                                                label: 'Issues',
-                                                data: [300, 50, 100],
-                                                backgroundColor: [
-                                                    'rgb(255, 99, 132)',
-                                                    'rgb(54, 162, 235)',
-                                                    'rgb(255, 205, 86)',
-                                                ],
-                                            },
-                                        ],
-                                    },
-                                })
-                            </script> -->
+                            <!-- <canvas id="chartjs-4" class="chartjs" width="undefined" height="undefined"></canvas> -->
+                            <ChartDisplay type="doughnut" />
                         </div>
                     </div>
                     <!--/Graph Card-->
