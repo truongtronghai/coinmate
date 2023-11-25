@@ -14,8 +14,6 @@ export default defineNuxtConfig({
                     integrity: 'sha256-XF29CBwU1MWLaGEnsELogU6Y6rcc5nCkhhx89nFMIDQ=',
                     crossorigin: 'anonymous',
                 },
-                // @ts-ignore
-                { type: 'text/javascript', src: '/js/drop-menu.js', body: true },
             ],
             link: [
                 {
@@ -47,5 +45,4 @@ export default defineNuxtConfig({
             },
         },
     },
-
 })
