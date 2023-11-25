@@ -17,7 +17,6 @@
     "devDependencies": {
         "@nuxt/devtools": "latest",
         "@nuxtjs/eslint-config-typescript": "^12.1.0",
-        "@nuxtjs/tailwindcss": "^6.9.5",
         "@typescript-eslint/parser": "^6.11.0",
         "eslint": "^8.54.0",
         "eslint-config-prettier": "^9.0.0",
@@ -27,8 +26,10 @@
         "nuxt": "^3.8.1",
         "prettier": "^3.1.0",
         "typescript": "^5.2.2",
+        "vite-plugin-vuetify": "^1.0.2",
         "vue": "^3.3.8",
-        "vue-router": "^4.2.5"
+        "vue-router": "^4.2.5",
+        "vuetify": "^3.4.3"
     },
     "lint-staged": {
         "**/*.{js,ts,vue}": [
@@ -37,6 +38,7 @@
         ]
     },
     "dependencies": {
+        "@mdi/font": "^7.3.67",
         "chart.js": "^4.4.0",
         "vue-chartjs": "^5.2.0"
     }

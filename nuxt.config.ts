@@ -1,4 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
 export default defineNuxtConfig({
     app: {
         head: {
@@ -6,9 +7,7 @@ export default defineNuxtConfig({
             viewport: 'width=device-width, initial-scale=1',
             title: 'Coinmate',
             meta: [{ name: 'description', content: 'Coinmate app.' }],
-            bodyAttrs: {
-                class: 'bg-gray-100 font-sans leading-normal tracking-normal',
-            },
+            bodyAttrs: {},
             script: [
                 {
                     src: 'https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js',
@@ -29,5 +28,22 @@ export default defineNuxtConfig({
         },
     },
     devtools: { enabled: false },
-    modules: ['@nuxtjs/tailwindcss'],
+    modules: [
+        (_options, nuxt) => {
+            nuxt.hooks.hook('vite:extendConfig', (config) => {
+                // @ts-expect-error
+                config.plugins.push(vuetify({ autoImport: true }))
+            })
+        },
+    ],
+    build: {
+        transpile: ['vuetify'],
+    },
+    vite: {
+        vue: {
+            template: {
+                transformAssetUrls,
+            },
+        },
+    },
 })
