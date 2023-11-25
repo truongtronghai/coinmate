@@ -28,6 +28,7 @@ export default defineNuxtConfig({
         },
     },
     devtools: { enabled: false },
+
     modules: [
         (_options, nuxt) => {
             nuxt.hooks.hook('vite:extendConfig', (config) => {
@@ -46,4 +47,5 @@ export default defineNuxtConfig({
             },
         },
     },
+
 })
