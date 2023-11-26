@@ -1,13 +1,10 @@
 <template>
     <client-only>
-        <v-navigation-drawer id="left-nav-drawer" :rail="rail" mobile-breakpoint="sm" @click="rail = false">
+        <v-navigation-drawer id="mob-nav-drawer" v-model="show" class="hidden-sm-and-up mt-2" location="top" rail>
             <v-list>
                 <v-list-item title="Home">
                     <template #prepend>
                         <v-icon icon="mdi-home-city" color="pink-accent-4" />
-                    </template>
-                    <template #append>
-                        <v-btn variant="text" icon="mdi-chevron-left" @click.stop="rail = !rail"></v-btn>
                     </template>
                 </v-list-item>
             </v-list>
@@ -15,5 +12,6 @@
     </client-only>
 </template>
 <script setup>
-const rail = ref(true)
+const props = defineProps({ show: Boolean })
+const show = computed(() => props.show)
 </script>
