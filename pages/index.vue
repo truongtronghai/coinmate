@@ -48,5 +48,4 @@
 </template>
 <script setup>
 const { data } = await useFetch('https://api.coingecko.com/api/v3/search/trending')
-console.log(data.value.coins[0].item)
 </script>
