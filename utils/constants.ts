@@ -2,5 +2,6 @@
 export const constants = {
     NAVIBAR: {
         HOME: ['Home', 'mdi-home-city'],
+        BI: ['BI', 'mdi-chart-bar'],
     },
 }
